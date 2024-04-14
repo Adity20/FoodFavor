@@ -51,10 +51,6 @@
     <img src="https://github.com/SusheelThapa/Quine-ZeroSpoil/assets/83631265/2ed8605d-b10d-47a9-be42-729348b8f03d" width=750/>
   </details>
 
-## Demo
-
-[ZeroSpoil Project Demo Video](https://github.com/SusheelThapa/Quine-ZeroSpoil/assets/83917129/c710915f-e47b-4d0f-939e-123d888ebd66)
-
 ## Installation
 
 ### Prerequisites
@@ -68,8 +64,8 @@ Before running, Quine-ZeroSpoil, you will need an OpenAI API key if the project 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/Quine-ZeroSpoil.git
-   cd Quine-ZeroSpoil
+   git clone https://github.com/Adity20/FoodFavor.git
+   cd FoodFavor
    ```
 
 2. Change directory to `frontend`
