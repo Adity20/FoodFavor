@@ -53,19 +53,17 @@ def donate_form(request):
         user_data = serializer.validated_data
 
 
-        # Constructing the email message with HTML content
-        email_subject = 'Confirmation of Your Food Donation Form Submission - ZeroSpoil'
+        email_subject = 'Confirmation of Your Food Donation Form Submission - FoodFavor'
 
-        # Render HTML content with image
+
         html_content = render_to_string('donate_food_email.html', {'user_data': user_data})
         text_content = strip_tags(html_content)
 
-        # Sending the email with both HTML and plain text content
         email = EmailMultiAlternatives(
             email_subject,
             text_content,
-            EMAIL_HOST_USER,  # Replace with the sender's email address
-            [user_data["email"]]  # Replace with the recipient's email address
+            EMAIL_HOST_USER,  
+            [user_data["email"]]  
         )
         email.attach_alternative(html_content, "text/html")
         email.send(fail_silently=False)
@@ -78,22 +76,15 @@ def donate_form(request):
 
 @api_view(['POST'])
 def newsletter(request):
-    # Extract data from the POST request
     user_data = request.data
-
-    # Constructing the email message with HTML content
-    email_subject = 'ZeroSpoil - Subscribed to Newsletter'
-
-    # Render HTML content with image
+    email_subject = 'FoodFavor - Subscribed to Newsletter'
     html_content = render_to_string('newsletter_email.html')
     text_content = strip_tags(html_content)
-
-    # Sending the email with both HTML and plain text content
     email = EmailMultiAlternatives(
         email_subject,
         text_content,
-        EMAIL_HOST_USER,  # Replace with the sender's email address
-        [user_data['email']]  # Replace with the recipient's email address
+        EMAIL_HOST_USER,  
+        [user_data['email']]  
     )
     email.attach_alternative(html_content, "text/html")
     email.send(fail_silently=False)
@@ -102,17 +93,12 @@ def newsletter(request):
 
 @api_view(['POST'])
 def contact_form(request):
-    # Extract data from the POST request
     user_data = request.data
     print("Request reached to backend")
-    # Constructing the email message with HTML content
-    email_subject = 'ZeroSpoil - Contact Form Submission'
-
-    # Render HTML content with image
+    email_subject = 'FoodFavor - Contact Form Submission'
     html_content = render_to_string('contact_us_email.html')
     text_content = strip_tags(html_content)
 
-    # Sending the email with both HTML and plain text content
     email = EmailMultiAlternatives(
         email_subject,
         text_content,
@@ -128,13 +114,8 @@ def contact_form(request):
 
 @api_view(['POST'])
 def get_recipe(request):
-    # Get the data from the POST request
     try:
-
-        # Get the data from the POST request
         ingredients = request.data
-
-        # Call OpenAI API to get recipe result
         prompt = f'''
             Given the following ingredients available in my home:
 
@@ -162,8 +143,6 @@ def get_recipe(request):
         )   
 
         response_data = completion.choices[0].message.content   
-
-        # Send the response back to the frontend
         return Response(response_data)  
      
     except Exception as e: 

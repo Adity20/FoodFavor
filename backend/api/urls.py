@@ -13,5 +13,4 @@ urlpatterns = [
     path('donate_form/', donate_form, name='donate_form'),
     path('contact_form/', contact_form, name='contact_form'),
     path('get_recipe/', get_recipe, name='get_recipe'),
-    path('newsletter/', newsletter, name='newsletter'),
 ] + router.urls
