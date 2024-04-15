@@ -102,8 +102,8 @@ def contact_form(request):
     email = EmailMultiAlternatives(
         email_subject,
         text_content,
-        EMAIL_HOST_USER,  # Replace with the sender's email address
-        [user_data["email"]]  # Replace with the recipient's email address
+        EMAIL_HOST_USER, 
+        [user_data["email"]]  
     )
     email.attach_alternative(html_content, "text/html")
     email.send(fail_silently=False)
