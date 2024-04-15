@@ -14,23 +14,14 @@ from pathlib import Path
 import os
 from decouple import config
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-ujebf4dcod_!k0(+v#$l&npq#1*jjv8ea-fh)#z1knad@*woro'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -48,7 +39,6 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    # YOUR SETTINGS
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
@@ -57,7 +47,6 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Contains API of inventory management',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
-    # OTHER SETTINGS
 }
 
 MIDDLEWARE = [
@@ -72,7 +61,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Add your React app's origin here
+    "http://localhost:3000", 
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -99,19 +88,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -129,9 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -141,13 +120,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
 STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -158,31 +131,16 @@ JAZZMIN_SETTINGS = {
     "site_header": "Admin Panel",
     "site_brand": "Admin Panel",
     "site_icon": "../media/LOGO.png",
-    # Add your own branding here
     "site_logo": "../media/LOGO.png",
     "welcome_sign": "Welcome to the Admin Panel",
-    # Copyright on the footer
     "copyright": "FoodFavor",
     "user_avatar": None,
-    ############
-    # Top Menu #
-    ############
-    # Links to put along the top menu
     "topmenu_links": [
-        # Url that gets reversed (Permissions can be added)
         {"name": "FoodFavor Home Page", "url": "home", "permissions": ["auth.view_user"]},
-        # model admin to link to (Permissions checked against model)
         {"model": "auth.User"},
     ],
-    #############
-    # Side Menu #
-    #############
-    # Whether to display the side menu
     "show_sidebar": True,
-    # Whether to aut expand the menu
     "navigation_expanded": True,
-    # Custom icons for side menu apps/models See https://fontawesome.com/icons?d=gallery&m=free&v=5.0.0,5.0.1,5.0.10,5.0.11,5.0.12,5.0.13,5.0.2,5.0.3,5.0.4,5.0.5,5.0.6,5.0.7,5.0.8,5.0.9,5.1.0,5.1.1,5.2.0,5.3.0,5.3.1,5.4.0,5.4.1,5.4.2,5.13.0,5.12.0,5.11.2,5.11.1,5.10.0,5.9.0,5.8.2,5.8.1,5.7.2,5.7.1,5.7.0,5.6.3,5.5.0,5.4.2
-    # for the full list of 5.13.0 free icon classes
     "icons": {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
@@ -190,28 +148,12 @@ JAZZMIN_SETTINGS = {
         "auth.Group": "fas fa-users",
         "admin.LogEntry": "fas fa-file",
     },
-    # # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-arrow-circle-right",
-    #################
-    # Related Modal #
-    #################
-    # Use modals instead of popups
     "related_modal_active": False,
-    #############
-    # UI Tweaks #
-    #############
-    # Relative paths to custom CSS/JS scripts (must be present in static files)
-    # Uncomment this line once you create the bootstrap-dark.css file
-    # "custom_css": "css/bootstrap-dark.css",
     "custom_js": None,
-    # Whether to show the UI customizer on the sidebar
     "show_ui_builder": False,
-    ###############
-    # Change view #
-    ###############
     "changeform_format": "horizontal_tabs",
-    # override change forms on a per modeladmin basis
     "changeform_format_overrides": {
         "auth.user": "collapsible",
         "auth.group": "vertical_tabs",
@@ -258,18 +200,14 @@ MEDIA_URL = '/media/'
 # Path where media is stored'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-
-# settings.py
-
-# Email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server
 EMAIL_PORT = 587  # Replace with your SMTP server's port
 EMAIL_USE_TLS = True
 EMAIL_HOST_SSL = False
-EMAIL_HOST_USER = '077bct079.saurav@pcampus.edu.np'  # Replace with your email
-EMAIL_HOST_PASSWORD = 'zfcpdghjfieredya'  # Replace with your email password
-DEFAULT_FROM_EMAIL = '077bct079.saurav@pcampus.edu.np'  # Replace with your default email
+# EMAIL_HOST_USER = '077bct079.saurav@pcampus.edu.np'  # Replace with your email
+EMAIL_HOST_USER = 'shubhomkar.m@gmail.com'
+EMAIL_HOST_PASSWORD = 'rbirynhxfbrnsscb'  # Replace with your email password
+DEFAULT_FROM_EMAIL = 'shubhomkar.m@gmail.com'  # Replace with your default email
 
-# Open Ai Key in environmental variable
 OPENAI_API_KEY = config('OPENAI_API_KEY')
