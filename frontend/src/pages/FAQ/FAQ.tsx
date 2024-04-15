@@ -58,7 +58,7 @@ const faqs = [
 const FAQ = () => {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <Layout>
         <div className="my-12 bg-stone-50 rounded-3xl ">
           <div className="py-4 pt-10 flex flex-col gap-8 justify-center items-center text-center">
@@ -96,7 +96,7 @@ const FAQ = () => {
           </div>
         </div>
       </Layout>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

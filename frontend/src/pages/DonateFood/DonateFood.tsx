@@ -7,9 +7,9 @@ import Layout from "@/layout/Layout";
 const DonateFood = () => {
   return (
     <>
+    <NavBar />
       <Layout>
-        <NavBar />
-        <div className="grid grid-cols-2 gap-20 m-5 my-5 mb-36 px-8 py-8 h-[70vh] justify-center align-middle items-center">
+        <div className="grid grid-cols-2 gap-20 m-5 my-5 mb-36 px-8 py-8 h-[80vh] justify-center align-middle items-center">
           <DonateFoodForm />
           <DonateFoodHero />
         </div>
