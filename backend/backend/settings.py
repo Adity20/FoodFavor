@@ -53,7 +53,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Quine-ZeroSpoil API',
+    'TITLE': 'Quine-FoodFavor API',
     'DESCRIPTION': 'Contains API of inventory management',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
@@ -162,7 +162,7 @@ JAZZMIN_SETTINGS = {
     "site_logo": "../media/LOGO.png",
     "welcome_sign": "Welcome to the Admin Panel",
     # Copyright on the footer
-    "copyright": "ZeroSpoil",
+    "copyright": "FoodFavor",
     "user_avatar": None,
     ############
     # Top Menu #
@@ -170,7 +170,7 @@ JAZZMIN_SETTINGS = {
     # Links to put along the top menu
     "topmenu_links": [
         # Url that gets reversed (Permissions can be added)
-        {"name": "ZeroSpoil Home Page", "url": "home", "permissions": ["auth.view_user"]},
+        {"name": "FoodFavor Home Page", "url": "home", "permissions": ["auth.view_user"]},
         # model admin to link to (Permissions checked against model)
         {"model": "auth.User"},
     ],
