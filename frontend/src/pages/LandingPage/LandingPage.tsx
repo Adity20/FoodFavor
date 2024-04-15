@@ -7,7 +7,6 @@ import FAQ from "@/pages/FAQ";
 import Products from "@/components/Products";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
-import Partners from "@/components/Partners";
 import { useEffect } from "react";
 
 const LandingPage = () => {

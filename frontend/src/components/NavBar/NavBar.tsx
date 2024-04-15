@@ -49,6 +49,12 @@ const NavBar = () => {
             className="hover:text-green-600 cursor-pointer"
             onClick={() => scrollToSection("contact-us")}
           >
+            <Link to="/#faq">FAQs</Link>
+          </li>
+          <li
+            className="hover:text-green-600 cursor-pointer"
+            onClick={() => scrollToSection("contact-us")}
+          >
             <Link to="/#contact-us">Contact Us</Link>
           </li>
         </ul>

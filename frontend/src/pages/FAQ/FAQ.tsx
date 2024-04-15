@@ -6,8 +6,6 @@ import {
 } from "@/components/ui/accordion";
 
 import Layout from "@/layout/Layout";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 
 import faqImage from "@/assets/img/faq.png";
 
