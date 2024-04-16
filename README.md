@@ -55,7 +55,7 @@
 
 ### Prerequisites
 
-Before running, Quine-ZeroSpoil, you will need an OpenAI API key if the project utilizes OpenAI's services. You can obtain an API key by registering on the OpenAI platform.
+Before running, FoodFavor, you will need an OpenAI API key if the project utilizes OpenAI's services. You can obtain an API key by registering on the OpenAI platform.
 
 ### Setup
 
