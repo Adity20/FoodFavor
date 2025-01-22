@@ -62,6 +62,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", 
+    "https://foodfavor101.netlify.app/"
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -94,6 +95,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+ALLOWED_HOSTS = ['*','.vercel.app', 'localhost']
 
 AUTH_PASSWORD_VALIDATORS = [
     {
