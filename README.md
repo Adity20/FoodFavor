@@ -55,7 +55,7 @@
 
 ### Prerequisites
 
-Before running, Quine-ZeroSpoil, you will need an OpenAI API key if the project utilizes OpenAI's services. You can obtain an API key by registering on the OpenAI platform.
+Before running, FoodFavor, you will need an OpenAI API key if the project utilizes OpenAI's services. You can obtain an API key by registering on the OpenAI platform.
 
 ### Setup
 
@@ -132,11 +132,3 @@ Before running, Quine-ZeroSpoil, you will need an OpenAI API key if the project 
 - Django Rest Framework
 - django-jazzmin 
 - django-spectacular
-
-## Contributing
-
-We welcome contributions to enhance and improve Feel free to submit issues, feature requests, or pull requests. Please adhere to our Code of Conduct.
-
-## License
-
-This project is licensed under the [MIT License](/LICENSE).
