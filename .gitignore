@@ -22,8 +22,11 @@ node_modules
 *.sln
 *.sw?
 
-.venv
+.backend/venv
 .vit
+__pycache__/
+*.pyc
+*.pyo
 
 __pycache__/
 .env

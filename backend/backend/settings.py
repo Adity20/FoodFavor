@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-ALLOWED_HOSTS = ['*','.vercel.app', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app']
 
 AUTH_PASSWORD_VALIDATORS = [
     {
